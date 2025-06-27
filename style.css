@@ -1,0 +1,105 @@
+/* === Animated Gradient Background === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Glassmorphism Container === */
+.quiz-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+}
+
+/* === Headings === */
+.quiz-container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* === Difficulty Buttons === */
+#difficulty-select button {
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #ffffff33;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#difficulty-select button:hover {
+  background-color: #ffffff55;
+}
+
+/* === Quiz Options === */
+#options button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  background-color: #ffffff22;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background-color: #ffffff55;
+}
+
+#options button.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#options button.wrong {
+  background-color: #f44336;
+  color: white;
+}
+
+/* === Next and Restart Buttons === */
+#next-btn, #restart-btn {
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#next-btn:hover, #restart-btn:hover {
+  background-color: #1976D2;
+}
+
+/* === Hide Class === */
+.hide {
+  display: none;
+}
